@@ -1,7 +1,7 @@
 export const colors = {
-  black: '#2d2828',
-  red: '#e57373',
-  white: '#fff',
-  gray: 'rgba(239, 216, 200, 0.81)',
-  blue: '#64b5f6',
+  black: 'rgb(68, 68, 68)',
+  red: '#ff6450',
+  white: '#737065',
+  gray: 'rgba(222, 197, 179, 0.81)',
+  blue: '#50bbff',
 };

@@ -1,26 +1,26 @@
 
 
 @font-face {
-    font-family: 'Anonymous';
-    src: url('../../assets/AnonymousPro-Bold.ttf');
+    font-family: 'Roboto Condensed';
+    src: url('../../assets/RobotoCondensed-Bold.ttf');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Anonymous';
-    src: url('../../assets/AnonymousPro-BoldItalic.ttf');
+    font-family: 'Roboto Condensed';
+    src: url('../../assets/RobotoCondensed-BoldItalic.ttf');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Anonymous';
-    src: url('../../assets/AnonymousPro-Regular.ttf');
+    font-family: 'Roboto Condensed';
+    src: url('../../assets/RobotoCondensed-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Anonymous';
-    src: url('../../assets/AnonymousPro-Italic.ttf');
+    font-family: 'Roboto Condensed';
+    src: url('../../assets/RobotoCondensed-Italic.ttf');
     font-style: italic;
 }

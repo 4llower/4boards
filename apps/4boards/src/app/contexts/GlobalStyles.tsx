@@ -15,9 +15,9 @@ export function GlobalStyles() {
         }
         html,
         body {
-          font-family: 'Anonymous';
+          font-family: 'Roboto Condensed';
           font-size: 16px;
-          color: #362620;
+          color: #444;
         }
       `}
     />
