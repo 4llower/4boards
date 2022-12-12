@@ -1,5 +1,11 @@
-import { Card } from '@4boards/codenames-ui';
+import { Codenames } from './containers';
+import { Providers } from './contexts';
+import './styles';
 
 export function App() {
-  return <Card />;
+  return (
+    <Providers>
+      <Codenames />
+    </Providers>
+  );
 }
