@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@4boards/codenames-ui": ["libs/codenames-ui/src/index.ts"]
+      "@4boards/codenames-ui": ["libs/codenames-ui/src/index.ts"],
+      "@4boards/common-ui": ["libs/common-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

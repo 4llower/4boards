@@ -1,7 +1,7 @@
 import { ClassNames } from '@emotion/react';
 import { useMemo } from 'react';
 
-import { colors } from './theme';
+import { colors } from './colors';
 
 type Props = {
   className?: string;
@@ -27,6 +27,9 @@ export function Card({ className, text, color, count, maxCount }: Props) {
       }
       case 'red': {
         return '#8a1000';
+      }
+      default: {
+        return '#aaa';
       }
     }
   }, [color]);

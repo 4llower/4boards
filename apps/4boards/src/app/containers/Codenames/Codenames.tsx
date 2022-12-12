@@ -21,8 +21,6 @@ export function Codenames() {
     });
   }, []);
 
-  console.log(data);
-
   return (
     <div
       css={css`

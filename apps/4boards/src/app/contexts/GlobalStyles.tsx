@@ -19,6 +19,11 @@ export function GlobalStyles() {
           font-size: 16px;
           color: #444;
         }
+        * {
+          font-family: 'Roboto Condensed';
+          font-size: 16px;
+          color: #444;
+        }
       `}
     />
   );
