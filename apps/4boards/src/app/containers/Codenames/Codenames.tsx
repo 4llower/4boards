@@ -1,6 +1,7 @@
 import { Card } from '@4boards/codenames-ui';
 import { css } from '@emotion/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
+import { Layout } from '../Layout';
 
 const testData = new Array(25).fill(0).map((_, index) => ({
   text: (+(Math.random() * 123123).toFixed(0)).toString(16),
@@ -15,6 +16,8 @@ const testData = new Array(25).fill(0).map((_, index) => ({
 export function Codenames() {
   const [data, setData] = useState(testData);
 
+  const id = useId();
+
   useEffect(() => {
     setData((data) => {
       return [{ ...data[0], count: 2, maxCount: 5 }, ...data.slice(1)];
@@ -22,33 +25,36 @@ export function Codenames() {
   }, []);
 
   return (
-    <div
-      css={css`
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      `}
-    >
+    <Layout>
       <div
         css={css`
+          width: 100%;
+          height: 100%;
           display: flex;
-          max-width: 1200px;
-          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
         `}
       >
-        {data.map((props) => (
-          <div
-            css={css`
-              margin-right: 40px;
-              margin-bottom: 20px;
-            `}
-          >
-            <Card {...props} />
-          </div>
-        ))}
+        <div
+          css={css`
+            display: flex;
+            max-width: 1200px;
+            flex-wrap: wrap;
+          `}
+        >
+          {data.map((props, index) => (
+            <div
+              key={id + index}
+              css={css`
+                margin-right: 40px;
+                margin-bottom: 20px;
+              `}
+            >
+              <Card {...props} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }

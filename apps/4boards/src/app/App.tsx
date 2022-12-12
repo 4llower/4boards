@@ -7,10 +7,9 @@ export function App() {
   return (
     <Providers>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="codenames" element={<Codenames />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
+        <Route index path="/play" element={<Play />}></Route>
+        <Route path="/codenames" element={<Codenames />}></Route>
+        <Route path="*" element={<Navigate to="/play" />}></Route>
       </Routes>
       <Codenames />
     </Providers>
