@@ -1,15 +1,28 @@
 import { Card } from '@4boards/codenames-ui';
 import { css } from '@emotion/react';
+import { useEffect, useState } from 'react';
 
 const testData = new Array(25).fill(0).map((_, index) => ({
   text: (+(Math.random() * 123123).toFixed(0)).toString(16),
-  color: ['blue', 'red', 'gray', 'white', 'black'][index % 5],
+  color: ['blue', 'red', 'gray', 'white', 'black'][
+    Math.floor(Math.random() * 10) % 5
+  ],
 })) as {
   text: string;
   color: 'blue' | 'red' | 'gray' | 'white' | 'black';
 }[];
 
 export function Codenames() {
+  const [data, setData] = useState(testData);
+
+  useEffect(() => {
+    setData((data) => {
+      return [{ ...data[0], count: 2, maxCount: 5 }, ...data.slice(1)];
+    });
+  }, []);
+
+  console.log(data);
+
   return (
     <div
       css={css`
@@ -27,14 +40,14 @@ export function Codenames() {
           flex-wrap: wrap;
         `}
       >
-        {testData.map(({ color, text }) => (
+        {data.map((props) => (
           <div
             css={css`
               margin-right: 40px;
               margin-bottom: 20px;
             `}
           >
-            <Card color={color} text={text} />
+            <Card {...props} />
           </div>
         ))}
       </div>

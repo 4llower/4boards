@@ -8,9 +8,12 @@ type Props = {
   text: string;
 
   color: 'black' | 'red' | 'blue' | 'gray' | 'white';
+
+  count?: number;
+  maxCount?: number;
 };
 
-export function Card({ className, text, color }: Props) {
+export function Card({ className, text, color, count, maxCount }: Props) {
   const fontColor = useMemo(() => {
     switch (color) {
       case 'black': {
@@ -49,11 +52,22 @@ export function Card({ className, text, color }: Props) {
               &:hover {
                 transform: scale(1.05);
               }
+              position: relative;
             `,
             className
           )}
         >
           {text.toUpperCase()}
+          {count && maxCount && (
+            <div
+              css={css`
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                font-size: 16px;
+              `}
+            >{`${count}/${maxCount}`}</div>
+          )}
         </div>
       )}
     </ClassNames>
