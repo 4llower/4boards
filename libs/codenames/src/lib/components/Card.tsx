@@ -1,7 +1,7 @@
 import { ClassNames } from '@emotion/react';
 import { useMemo } from 'react';
 
-import { colors } from './colors';
+import { colors } from '../colors';
 
 type Props = {
   className?: string;

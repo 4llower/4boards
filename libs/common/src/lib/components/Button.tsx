@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { ButtonHTMLAttributes } from 'react';
-import { colors } from './colors';
+import { colors } from '../colors';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement>;
 

@@ -1,3 +1,3 @@
 export * from './Codenames';
-export * from './Layout';
+export * from '../layouts/Layout';
 export * from './Play';

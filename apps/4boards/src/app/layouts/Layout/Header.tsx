@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Button } from '@4boards/common-ui';
+import { Button } from '@4boards/common';
 
 export function Header() {
   return (
